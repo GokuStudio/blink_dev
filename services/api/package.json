@@ -8,6 +8,7 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "test": "tsx --test src/app.test.ts",
+    "test:rules": "tsx --test src/firestore-rules.test.ts",
     "telemetry:publish": "tsx src/demo/publisher.ts",
     "telemetry:subscribe": "tsx src/demo/subscriber.ts"
   },

@@ -33,7 +33,7 @@ export const firestore = getFirestore(firebaseApp);
 
 if (process.env.EXPO_PUBLIC_FIREBASE_USE_EMULATORS === "true") {
   const host = process.env.EXPO_PUBLIC_FIREBASE_EMULATOR_HOST ?? "localhost";
-  connectAuthEmulator(auth, `http://${host}:9099`);
+  connectAuthEmulator(auth, `http://${host}:9099`, { disableWarnings: true });
   connectDatabaseEmulator(database, host, 9000);
   connectFirestoreEmulator(firestore, host, 8081);
 }

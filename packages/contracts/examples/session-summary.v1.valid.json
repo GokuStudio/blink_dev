@@ -1,0 +1,16 @@
+{
+  "sessionId": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+  "deviceId": "demo-eye-01",
+  "userId": "user-blink-01",
+  "startedAt": "2026-11-20T08:00:00.000Z",
+  "endedAt": "2026-11-20T08:30:00.000Z",
+  "durationSeconds": 1800,
+  "totalBlinks": 450,
+  "averageBpm": 15.0,
+  "minBpm": 9,
+  "maxBpm": 22,
+  "nudgeCount": 2,
+  "adherenceScore": 88.5,
+  "createdAt": "2026-11-20T08:30:05.000Z",
+  "schemaVersion": "1.0.0"
+}

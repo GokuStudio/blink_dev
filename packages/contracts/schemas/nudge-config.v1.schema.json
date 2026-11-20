@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://blink.example/contracts/nudge-config.v1.schema.json",
+  "title": "NudgeConfig",
+  "description": "User configuration parameters for edge nudging and 20-20-20 adherence reminders.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "configId",
+    "revision",
+    "lowBlinkRateThreshold",
+    "windowDurationSeconds",
+    "cooldownSeconds",
+    "rule202020Enabled",
+    "alertModality",
+    "updatedAt",
+    "schemaVersion"
+  ],
+  "properties": {
+    "configId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "lowBlinkRateThreshold": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 30
+    },
+    "windowDurationSeconds": {
+      "type": "integer",
+      "minimum": 15,
+      "maximum": 300
+    },
+    "cooldownSeconds": {
+      "type": "integer",
+      "minimum": 30,
+      "maximum": 1800
+    },
+    "rule202020Enabled": {
+      "type": "boolean"
+    },
+    "alertModality": {
+      "type": "string",
+      "enum": ["audio", "haptic", "visual", "silent_log"]
+    },
+    "userId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,128}$"
+    },
+    "deviceId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,128}$"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    }
+  }
+}

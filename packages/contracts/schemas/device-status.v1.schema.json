@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://blink.example/contracts/device-status.v1.schema.json",
+  "title": "DeviceStatus",
+  "description": "Operational health, monitoring state, sensor status, and connectivity of a Blink hardware companion.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "deviceId",
+    "reportedAt",
+    "availability",
+    "monitoringState",
+    "faceDetectionState",
+    "cameraState",
+    "connectionHealth",
+    "schemaVersion"
+  ],
+  "properties": {
+    "deviceId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,128}$"
+    },
+    "reportedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "availability": {
+      "type": "string",
+      "enum": ["available", "busy", "offline", "maintenance"]
+    },
+    "monitoringState": {
+      "type": "string",
+      "enum": ["idle", "calibrating", "monitoring", "paused"]
+    },
+    "faceDetectionState": {
+      "type": "string",
+      "enum": ["face_detected", "face_not_detected", "multiple_faces", "low_confidence"]
+    },
+    "cameraState": {
+      "type": "string",
+      "enum": ["ready", "streaming", "permission_denied", "sensor_error", "closed"]
+    },
+    "connectionHealth": {
+      "type": "string",
+      "enum": ["connected", "connecting", "disconnected", "reconnecting", "degraded"]
+    },
+    "batteryLevelPercent": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "firmwareVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+.*$"
+    },
+    "errorMessage": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    }
+  }
+}

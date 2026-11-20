@@ -1,0 +1,12 @@
+{
+  "deviceId": "demo-eye-01",
+  "reportedAt": "2026-11-20T08:15:00.000Z",
+  "availability": "available",
+  "monitoringState": "monitoring",
+  "faceDetectionState": "face_detected",
+  "cameraState": "streaming",
+  "connectionHealth": "connected",
+  "batteryLevelPercent": 92,
+  "firmwareVersion": "1.0.4-rc1",
+  "schemaVersion": "1.0.0"
+}

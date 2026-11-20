@@ -12,3 +12,18 @@ node_modules/
 **/.blink-demo-auth.json
 *.iml
 .DS_Store
+
+# Local Java installations
+.jdk/
+
+# Android local configuration
+**/local.properties
+
+# Android build outputs
+**/.gradle/
+**/build/
+
+# Environment secrets
+.env
+.env.*
+!.env.example

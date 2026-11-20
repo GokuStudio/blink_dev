@@ -1,0 +1,11 @@
+{
+  "configId": "not-a-uuid",
+  "revision": 0,
+  "lowBlinkRateThreshold": 2,
+  "windowDurationSeconds": 10,
+  "cooldownSeconds": 15,
+  "rule202020Enabled": "not-a-boolean",
+  "alertModality": "laser_beam",
+  "updatedAt": "invalid-date",
+  "schemaVersion": "0.9.0"
+}

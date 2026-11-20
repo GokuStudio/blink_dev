@@ -10,6 +10,7 @@
   "scripts": {
     "build": "npm run build --workspace=@blink/contracts && npm run build --workspace=@blink/api && npm run build --workspace=@blink/companion",
     "test": "npm run build --workspace=@blink/contracts && npm run test --workspace=@blink/contracts && npm run test --workspace=@blink/api",
+    "test:rules": "npm run test:rules --workspace=@blink/api",
     "dev:api": "npm run build --workspace=@blink/contracts && npm run dev --workspace=@blink/api",
     "dev:publisher": "npm run telemetry:publish --workspace=@blink/api",
     "dev:subscriber": "npm run telemetry:subscribe --workspace=@blink/api",

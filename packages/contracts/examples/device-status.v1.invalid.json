@@ -1,0 +1,12 @@
+{
+  "deviceId": "demo-eye-01",
+  "reportedAt": "not-a-timestamp",
+  "availability": "destroyed",
+  "monitoringState": "hypnotized",
+  "faceDetectionState": "alien_face",
+  "cameraState": "broken_glass",
+  "connectionHealth": "quantum_entangled",
+  "batteryLevelPercent": 150,
+  "firmwareVersion": "invalid_version",
+  "schemaVersion": "invalid"
+}

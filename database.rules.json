@@ -7,7 +7,25 @@
             "liveState": {
               ".read": "auth != null && auth.uid === $uid",
               ".write": "auth != null && auth.uid === $uid",
-              ".validate": "newData.hasChildren(['deviceId', 'observedAt', 'blinkRatePerMinute', 'eyeClosureRatio', 'status']) && newData.numChildren() === 5 && newData.child('deviceId').isString() && newData.child('deviceId').val() === $deviceId && newData.child('observedAt').isString() && newData.child('blinkRatePerMinute').isNumber() && newData.child('blinkRatePerMinute').val() >= 0 && newData.child('blinkRatePerMinute').val() <= 120 && newData.child('eyeClosureRatio').isNumber() && newData.child('eyeClosureRatio').val() >= 0 && newData.child('eyeClosureRatio').val() <= 1 && newData.child('status').isString() && (newData.child('status').val() === 'active' || newData.child('status').val() === 'inactive')"
+              ".validate": "newData.hasChildren(['deviceId', 'observedAt', 'blinkRatePerMinute', 'eyeClosureRatio', 'status'])",
+              "deviceId": {
+                ".validate": "newData.isString() && newData.val() === $deviceId"
+              },
+              "observedAt": {
+                ".validate": "newData.isString()"
+              },
+              "blinkRatePerMinute": {
+                ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 120"
+              },
+              "eyeClosureRatio": {
+                ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 1"
+              },
+              "status": {
+                ".validate": "newData.isString() && (newData.val() === 'active' || newData.val() === 'inactive')"
+              },
+              "$other": {
+                ".validate": false
+              }
             }
           }
         },

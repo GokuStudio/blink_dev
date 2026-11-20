@@ -1,0 +1,13 @@
+{
+  "configId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+  "revision": 3,
+  "lowBlinkRateThreshold": 12,
+  "windowDurationSeconds": 60,
+  "cooldownSeconds": 180,
+  "rule202020Enabled": true,
+  "alertModality": "audio",
+  "userId": "user-blink-01",
+  "deviceId": "demo-eye-01",
+  "updatedAt": "2026-11-20T07:30:00.000Z",
+  "schemaVersion": "1.0.0"
+}

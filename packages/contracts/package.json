@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "tsx --test src/live-device-state.test.ts"
+    "test": "tsx --test \"src/**/*.test.ts\""
   },
   "dependencies": {
     "ajv": "^8.17.1",

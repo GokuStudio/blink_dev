@@ -1,0 +1,13 @@
+{
+  "sessionId": "not-a-valid-uuid",
+  "deviceId": "demo-eye-01",
+  "userId": "user-blink-01",
+  "startedAt": "invalid-timestamp",
+  "endedAt": "2026-11-20T08:30:00.000Z",
+  "durationSeconds": -100,
+  "totalBlinks": -5,
+  "averageBpm": 180.0,
+  "nudgeCount": -1,
+  "schemaVersion": "2.0.0",
+  "unexpectedInjectedField": "malicious"
+}
