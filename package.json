@@ -1,0 +1,30 @@
+{
+  "name": "blink-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/contracts",
+    "services/api",
+    "apps/blink-companion"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@blink/contracts && npm run build --workspace=@blink/api && npm run build --workspace=@blink/companion",
+    "test": "npm run build --workspace=@blink/contracts && npm run test --workspace=@blink/contracts && npm run test --workspace=@blink/api",
+    "dev:api": "npm run build --workspace=@blink/contracts && npm run dev --workspace=@blink/api",
+    "dev:publisher": "npm run telemetry:publish --workspace=@blink/api",
+    "dev:subscriber": "npm run telemetry:subscribe --workspace=@blink/api",
+    "emulators": "firebase emulators:start --config firebase.json",
+    "format": "prettier --write \"**/*.{json,md,ts,tsx,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{json,md,ts,tsx,yml,yaml}\""
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.29.2",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "~5.7.2"
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  }
+}

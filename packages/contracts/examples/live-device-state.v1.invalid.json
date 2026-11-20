@@ -1,0 +1,8 @@
+{
+  "deviceId": "demo-eye-01",
+  "observedAt": "not-a-timestamp",
+  "blinkRatePerMinute": 250,
+  "eyeClosureRatio": 1.4,
+  "status": "unknown",
+  "unexpected": true
+}

@@ -1,0 +1,7 @@
+{
+  "deviceId": "demo-eye-01",
+  "observedAt": "2026-11-20T01:00:00.000Z",
+  "blinkRatePerMinute": 18,
+  "eyeClosureRatio": 0.12,
+  "status": "active"
+}

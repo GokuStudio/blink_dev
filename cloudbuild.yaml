@@ -1,0 +1,13 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --file
+      - services/api/Dockerfile
+      - --tag
+      - ${_LOCATION}-docker.pkg.dev/$PROJECT_ID/blink/blink-api
+      - .
+images:
+  - ${_LOCATION}-docker.pkg.dev/$PROJECT_ID/blink/blink-api
+substitutions:
+  _LOCATION: us-central1
